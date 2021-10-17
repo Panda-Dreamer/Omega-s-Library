@@ -33,3 +33,8 @@ let Omega = (function_name,...parameters) => {
 }
 ```
 You can now head back to the sheet and try to use ```=Omega("help")``` (might require a reload)
+
+
+PS:
+You may need to give permissions to the library, if you encounter an internal error while using ```=Omega("help")```, head back to the code editor, Press run and wait for the allow permissions screen to display.
+The library is asking for "Connect to an external service" permissions as it needs it to contact the roblox API
