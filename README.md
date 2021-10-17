@@ -40,7 +40,8 @@ You may need to give permissions to the library, if you encounter an internal er
 The library is asking for "Connect to an external service" permissions as it needs it to contact the roblox API
 
 # Methods
-Tag	| Description	| Arguments
+Tag	| Description	| Format
+
 **avatar:** Get the image link to a user's avatar	```=Omega("avatar";UserId{CELL/RANGE/STRING/NUMBER})```
 
 **credits:**	Displays credits for the library	```=Omega("credits")```
