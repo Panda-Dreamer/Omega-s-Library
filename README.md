@@ -40,28 +40,28 @@ You may need to give permissions to the library, if you encounter an internal er
 The library is asking for "Connect to an external service" permissions as it needs it to contact the roblox API
 
 # Methods
-| Tag | Description |
-| --- | --- |
-| help | Shows the help table for the library|
-| avatar | Get the image link to a user's avatar |
-| credits | Displays credits for the library |
-| online | Get if a user is online or not |
-| server_average_ping | Get the average ping of the first 100 servers of a game |
-| server_average_fill | Get the average number of players of the first 100 servers of a game |
-| server_average_fps | Get the average fps of the first 100 servers of a game |
-| universeid | Get the universe id of a place |
-| favourites | Get the number of favourites of an universe |
-| upvotes | Get the number of up votes of an universe |
-| downvotes | Get the number of down votes of an universe |
-| rank_in_group | Get the rank of an user in a specified group |
-| group_owner | Get the group owner id for a group |
-| group_membercount | Get the member count of a group |
-| group_isopen | Get if a group is open to public |
-| user_status | Get a user status |
-| user_costumes | Get a list of costumes for a player|
-| user_avatar | Get a list assets for a player current avatar |
-| past_usernames | Get a list of past usernames for a player |
-| userinfo | Get data on a roblox user |
-| confifgure | Get a link to a universe configuration webpage |
-| group_creations | Get a link to the specified group creation webpage |
-| gamelink | Get a link to a game using the Id |
+| Tag | Description | Format |
+| --- | --- | --- |
+| help | Shows the help table for the library | ```=Omega("help")``` |
+| avatar | Get the image link to a user's avatar |```=Omega("avatar";UserId{CELL/RANGE/STRING/NUMBER})``` |
+| credits | Displays credits for the library | ```=Omega("credits")``` |
+| online | Get if a user is online or not | ```=Omega("online";UserId{CELL/RANGE/STRING/NUMBER})``` |
+| server_average_ping | Get the average ping of the first 100 servers of a game | ```=Omega("server_average_ping";PlaceId{CELL/RANGE/STRING/NUMBER}``` |
+| server_average_fill | Get the average number of players of the first 100 servers of a game | ```=Omega("server_average_fill";PlaceId{CELL/RANGE/STRING/NUMBER}``` |
+| server_average_fps | Get the average fps of the first 100 servers of a game | ```=Omega("server_average_fps";PlaceId{CELL/RANGE/STRING/NUMBER}``` |
+| universeid | Get the universe id of a place | ```=Omega("universeid";PlaceId{CELL/RANGE/STRING/NUMBER})``` |
+| favourites | Get the number of favourites of an universe | ```=Omega("favourites";UniverseId{CELL/RANGE/STRING/NUMBER})``` |
+| upvotes | Get the number of up votes of an universe | ```=Omega("upvotes";UniverseId{CELL/RANGE/STRING/NUMBER})``` |
+| downvotes | Get the number of down votes of an universe | ```=Omega("downvotes";UniverseId{CELL/RANGE/STRING/NUMBER})``` |
+| rank_in_group | Get the rank of an user in a specified group | ```=Omega("rank_in_group";UserId{CELL/RANGE/STRING/NUMBER};GroupId{CELL/STRING/NUMBER})``` |
+| group_owner | Get the group owner id for a group | ```=Omega("group_owner";GroupId{CELL/RANGE/STRING/NUMBER})``` |
+| group_membercount | Get the member count of a group | ```=Omega("group_membercount";GroupId{CELL/RANGE/STRING/NUMBER})``` |
+| group_isopen | Get if a group is open to public | ```=Omega("group_isopen";GroupId{CELL/RANGE/STRING/NUMBER})``` |
+| user_status | Get a user status | ```=Omega("user_status";UserId{CELL/RANGE/STRING/NUMBER})``` |
+| user_costumes | Get a list of costumes for a player| ```=Omega("user_costumes";UserId{CELL/RANGE/STRING/NUMBER})``` |
+| user_avatar | Get a list assets for a player current avatar | ```=Omega("user_avatar";UserId{CELL/RANGE/STRING/NUMBER})``` |
+| past_usernames | Get a list of past usernames for a player | ```=Omega("past_usernames";UserId{CELL/RANGE/STRING/NUMBER})``` |
+| userinfo | Get data on a roblox user | ```=Omega("userinfo";UserId{CELL/RANGE/STRING/NUMBER})``` |
+| confifgure | Get a link to a universe configuration webpage | ```=Omega("configure";UniverseId{CELL/RANGE/STRING/NUMBER})``` |
+| group_creations | Get a link to the specified group creation webpage | ```=Omega("group_creations";GroupId{CELL/RANGE/STRING/NUMBER})``` |
+| gamelink | Get a link to a game using the Id | ```=Omega("gamelink";GameId{CELL/RANGE/STRING/NUMBER})``` |
