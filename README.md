@@ -62,6 +62,6 @@ The library is asking for "Connect to an external service" permissions as it nee
 | user_avatar | Get a list assets for a player current avatar | ```=Omega("user_avatar";UserId{CELL/RANGE/STRING/NUMBER})``` |
 | past_usernames | Get a list of past usernames for a player | ```=Omega("past_usernames";UserId{CELL/RANGE/STRING/NUMBER})``` |
 | userinfo | Get data on a roblox user | ```=Omega("userinfo";UserId{CELL/RANGE/STRING/NUMBER})``` |
-| confifgure | Get a link to a universe configuration webpage | ```=Omega("configure";UniverseId{CELL/RANGE/STRING/NUMBER})``` |
+| configure | Get a link to a universe configuration webpage | ```=Omega("configure";UniverseId{CELL/RANGE/STRING/NUMBER})``` |
 | group_creations | Get a link to the specified group creation webpage | ```=Omega("group_creations";GroupId{CELL/RANGE/STRING/NUMBER})``` |
 | gamelink | Get a link to a game using the Id | ```=Omega("gamelink";GameId{CELL/RANGE/STRING/NUMBER})``` |
