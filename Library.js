@@ -531,6 +531,103 @@ function customFunctions() {
     return ra;
   }
 
+/**
+   * Get user informations
+   * @param {any} The user id
+   * @return an array of informations
+   * @customfunction
+   */
+  function USERINFOS(userids) {
+    userids =  String(userids).split(",")
+    if (userids[0] == null) {
+      userids = [userids];
+    }
+    i = 0;
+    ra = [];
+    userids.forEach((user) => {
+      let options = {
+        method: "get",
+      };
+      url = "https://users.roblox.com/v1/users/" + user
+      data = UrlFetchApp.fetch(url, options);
+      var pdata = JSON.parse(data.getContentText());
+      let str = "";
+      ra2 = []
+      Array.from(pdata).forEach((entry) => {
+        ra2[i] = entry
+        i=i+1
+      })
+      ra[i] = ra2
+      i = i = 1;
+    });
+    return ra;
+  }
+
+  /**
+   * A link to go directly to the setting page of a universe
+   * @param {any} The universe id
+   * @return The settings link
+   * @customfunction
+   */
+  function CONFIGURE(universeids) {
+    universeids =  String(universeids).split(",")
+    if (universeids[0] == null) {
+      universeids = [universeids];
+    }
+    i = 0;
+    ra = [];
+    universeids.forEach((universe) => {
+      result = "https://www.roblox.com/universes/configure?id="+universe
+      ra[i] = result;
+      i = i + 1;
+    });
+    return ra;
+  }
+
+/**
+   * A link to go directly to the selected group creations page
+   * @param {any} The group id
+   * @return The settings link
+   * @customfunction
+   */
+  function GROUPCREATIONS(groupids) {
+    groupids =  String(groupids).split(",")
+    if (groupids[0] == null) {
+      groupids = [groupids];
+    }
+    i = 0;
+    ra = [];
+    groupids.forEach((group) => {
+      result = "https://www.roblox.com/develop/groups/"+group
+      ra[i] = result;
+      i = i + 1;
+    });
+    return ra;
+  }
+
+ /**
+   * A link to go directly to the game page
+   * @param {any} The game id
+   * @return The game link
+   * @customfunction
+   */
+  function GAMELINK(gameids) {
+    gameids =  String(gameids).split(",")
+    if (gameids[0] == null) {
+      gameids = [gameids];
+    }
+    i = 0;
+    ra = [];
+    gameids.forEach((game) => {
+      result = "www.roblox.com/games/"+game
+      ra[i] = result;
+      i = i + 1;
+    });
+    return ra;
+  }
+
+
+
   function HELP(){
     return [
       ["Tag","Description","Arguments"],
@@ -553,6 +650,10 @@ function customFunctions() {
        ["user_costumes","Get a list of costumes for a player","=Omega(\"user_costumes\";UserId{CELL/RANGE/STRING/NUMBER})"],
        ["user_avatar","Get a list assets for a player current avatar","=Omega(\"user_avatar\";UserId{CELL/RANGE/STRING/NUMBER})"],
        ["past_usernames","Get a list of past usernames for a player","=Omega(\"past_usernames\";UserId{CELL/RANGE/STRING/NUMBER})"],
+       ["userinfo","Get data on a roblox user","=Omega(\"userinfo\";UserId{CELL/RANGE/STRING/NUMBER})"],
+       ["configure","Get a link to a universe configuration webpage","=Omega(\"configure\";UniverseId{CELL/RANGE/STRING/NUMBER})"],
+       ["group_creations","Get a link to the specified group creation webpage","=Omega(\"group_creations\";GroupId{CELL/RANGE/STRING/NUMBER})"],
+       ["gamelink","Get a link to a game using the Id","=Omega(\"gamelink\";GameId{CELL/RANGE/STRING/NUMBER})"],
       ["help","Shows the help table for the library","=Omega(\"help\")"],
     ]
   }
@@ -577,7 +678,10 @@ function customFunctions() {
     user_avatar: USERAVATAR,
     past_usernames: PASTUSERNAMES,
     help:HELP,
-
+    userinfo:USERINFOS,
+    configure:CONFIGURE,
+    group_creations:GROUPCREATIONS,
+    gamelink:GAMELINK
   };
 
   /**
