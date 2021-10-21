@@ -42,7 +42,26 @@ The library is asking for "Connect to an external service" permissions as it nee
 # Methods
 | Tag | Description |
 | --- | --- |
+| help | Shows the help table for the library|
 | avatar | Get the image link to a user's avatar |
 | credits | Displays credits for the library |
 | online | Get if a user is online or not |
-
+| server_average_ping | Get the average ping of the first 100 servers of a game |
+| server_average_fill | Get the average number of players of the first 100 servers of a game |
+| server_average_fps | Get the average fps of the first 100 servers of a game |
+| universeid | Get the universe id of a place |
+| favourites | Get the number of favourites of an universe |
+| upvotes | Get the number of up votes of an universe |
+| downvotes | Get the number of down votes of an universe |
+| rank_in_group | Get the rank of an user in a specified group |
+| group_owner | Get the group owner id for a group |
+| group_membercount | Get the member count of a group |
+| group_isopen | Get if a group is open to public |
+| user_status | Get a user status |
+| user_costumes | Get a list of costumes for a player|
+| user_avatar | Get a list assets for a player current avatar |
+| past_usernames | Get a list of past usernames for a player |
+| userinfo | Get data on a roblox user |
+| confifgure | Get a link to a universe configuration webpage |
+| group_creations | Get a link to the specified group creation webpage |
+| gamelink | Get a link to a game using the Id |
